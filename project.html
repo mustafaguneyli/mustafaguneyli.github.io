@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerim</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="project.html">Projelerim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Projelerim</h2>
+
+        <div class="filter-buttons">
+            <button onclick="filterProjects('all')">Tümü</button>
+            <button onclick="filterProjects('latest')">En Son Projeler</button>
+            <button onclick="filterProjects('Ai')">Yapay Zeka</button>
+            <button onclick="filterProjects('web')">Web</button>
+        </div>
+
+
+       
+    <div id="projectGallery">
+        <!-- Projeler yalnızca bir kez tanımlandı, ancak birden fazla kategoriye atanabilir -->
+        <div class="project web" data-category="web" onclick="openModal('image/p1.jpg.jpg', 'Proje 1', 'Bu proje mobil eczane projemiz')">
+            <img src="image/p1.jpg.jpg" alt="Proje 1">
+        </div>
+        <div class="project web" data-category="web" onclick="openModal('image/p2.jpg.jpg', 'Proje 2', 'Pharmavent projemizin bilgilerini içeren broşürümüz')">
+            <img src="image/p2.jpg.jpg" alt="Proje 2">
+        </div>
+        <div class="project latest Ai" data-category="latest Ai" onclick="openModal('image/p3.jpg.jpg', 'Proje 3', 'Akıllı geri dönüşüm projemizin çizilmiş görüntüsü')">
+            <img src="image/p3.jpg.jpg" alt="Proje 3">
+        </div>
+        <div class="project latest Ai" data-category="latest Ai" onclick="openModal('image/p4.jpg.jpg', 'Proje 4', 'Akıllı Geri Dönüşüm Projemizin gerçekçi görüntüsü')">
+            <img src="image/p4.jpg.jpg" alt="Proje 4">
+        </div>
+        
+        <div class="project latest" data-category="latest" onclick="openModal('image/p5.png', 'Proje 5', 'Burada Akıllı Geri Dönüşüm projemizin özetini ve emeği geçenleri gçrebilirsiniz.')">
+            <img src="image/p5.png" alt="Proje 5">
+        </div>        
+            
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content">
+        <div id="modalCaption" class="caption"></div>
+    </div>
+</body>
+</html>
